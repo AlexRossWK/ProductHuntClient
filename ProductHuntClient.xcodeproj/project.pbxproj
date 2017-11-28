@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF8381B91FCE039D00539661 /* DateSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8381B81FCE039D00539661 /* DateSingleton.swift */; };
+		AF8381BC1FCE03C800539661 /* currentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8381BB1FCE03C800539661 /* currentDate.swift */; };
 		AFC3EE111FCC363000ED5451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3EE101FCC363000ED5451 /* AppDelegate.swift */; };
 		AFC3EE131FCC363000ED5451 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3EE121FCC363000ED5451 /* MainViewController.swift */; };
 		AFC3EE161FCC363000ED5451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC3EE141FCC363000ED5451 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		34AE14C65EF1A9587763393E /* Pods-ProductHuntClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductHuntClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProductHuntClient/Pods-ProductHuntClient.debug.xcconfig"; sourceTree = "<group>"; };
+		AF8381B81FCE039D00539661 /* DateSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSingleton.swift; sourceTree = "<group>"; };
+		AF8381BB1FCE03C800539661 /* currentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = currentDate.swift; sourceTree = "<group>"; };
 		AFC3EE0D1FCC363000ED5451 /* ProductHuntClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductHuntClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC3EE101FCC363000ED5451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC3EE121FCC363000ED5451 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF8381BA1FCE03B900539661 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				AF8381BB1FCE03C800539661 /* currentDate.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		AFC3EE041FCC363000ED5451 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 		AFC3EE221FCC380900ED5451 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				AF8381BA1FCE03B900539661 /* Date */,
 				AFC3EE271FCC388000ED5451 /* API+Parsing */,
 			);
 			path = Helpers;
@@ -113,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AFD074C81FCCA4AD00D94CE1 /* ProductModel.swift */,
+				AF8381B81FCE039D00539661 /* DateSingleton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,7 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC3EE131FCC363000ED5451 /* MainViewController.swift in Sources */,
+				AF8381B91FCE039D00539661 /* DateSingleton.swift in Sources */,
 				AFD074DA1FCD3DBC00D94CE1 /* MainCell.swift in Sources */,
+				AF8381BC1FCE03C800539661 /* currentDate.swift in Sources */,
 				AFC3EE111FCC363000ED5451 /* AppDelegate.swift in Sources */,
 				AFD074E51FCD560E00D94CE1 /* CategoryCell.swift in Sources */,
 				AFD074C51FCC8CCD00D94CE1 /* FetchingData.swift in Sources */,

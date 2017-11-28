@@ -20,7 +20,7 @@ class FetchingData {
             URL(string: "https://api.producthunt.com/v1/categories/\(category)/posts")!,
             method: .get,
             parameters: ["days_ago": "0",
-                         "day": "2017-11-27"],
+                         "day": DateSingleton.shared.chosenDate],
             headers: ["Accept": "application/json",
                       "Content-Type": "application/json",
                       "Authorization": "Bearer 591f99547f569b05ba7d8777e2e0824eea16c440292cce1f8dfb3952cc9937ff",

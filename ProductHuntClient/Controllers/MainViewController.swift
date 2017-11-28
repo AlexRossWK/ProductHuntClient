@@ -38,6 +38,8 @@ extension MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        CurrentDate.today()
+        
         addRefreshControl()
         addCategoryButton()
         

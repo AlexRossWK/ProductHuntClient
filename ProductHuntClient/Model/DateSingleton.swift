@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class DateSingleton {
+    
+    static let shared = DateSingleton()
+    
+    var chosenDate = String()
+    
+}

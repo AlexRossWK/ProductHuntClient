@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
     
     var product: ProductModel!
     
+    
 }
 
 
@@ -30,25 +31,8 @@ class DetailViewController: UIViewController {
 extension DetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        configGradientLayer(gradientLayer)
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        imageView.kf.setImage(with: URL(string: product.screenshotUrl))
-        upvotesLabel.layer.cornerRadius = 10
-        upvotesLabel.layer.masksToBounds = true
-        upvotesLabel.text = "✔︎\(product.upvotesAmount)"
-        descrtiptionLabel.text = product.description
-        nameLabel.text = product.name
-        gitItButton.layer.cornerRadius = 10
-        gitItButton.layer.masksToBounds = true
-        gitItButton.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1).withAlphaComponent(0.2)
-        gitItButton.layer.borderColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
-        gitItButton.layer.borderWidth = 0.7
-      
+     generateDetailVC()
     }
-    
 }
 
 //MARK: - Go by reference
@@ -71,5 +55,36 @@ extension DetailViewController {
         let middleColor = #colorLiteral(red: 0.4033790827, green: 0.6433452964, blue: 0.2546537817, alpha: 1).cgColor
         let endColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1).cgColor
         gradientLayer.colors = [startColor, middleColor, endColor]
+    }
+}
+
+
+
+//MARK: - VCFormatter
+extension DetailViewController {
+    func generateDetailVC() {
+        //fctivity View
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        let ai = UIActivityIndicatorView(frame: CGRect(x: 0, y: 64, width: 310, height: 285))
+        view.addSubview(ai)
+        ai.startAnimating()
+        //add Gradient
+        configGradientLayer(gradientLayer)
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        //fill Outlets
+        imageView.kf.setImage(with: URL(string: product.screenshotUrl), placeholder: nil, options: nil, progressBlock: nil) { (image, error, _, _) in
+            ai.stopAnimating()
+            ai.removeFromSuperview()
+        }
+        upvotesLabel.layer.cornerRadius = 10
+        upvotesLabel.layer.masksToBounds = true
+        upvotesLabel.text = "✔︎\(product.upvotesAmount)"
+        descrtiptionLabel.text = product.description
+        nameLabel.text = product.name
+        gitItButton.layer.cornerRadius = 10
+        gitItButton.layer.masksToBounds = true
+        gitItButton.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1).withAlphaComponent(0.2)
+        gitItButton.layer.borderColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
+        gitItButton.layer.borderWidth = 0.7
     }
 }

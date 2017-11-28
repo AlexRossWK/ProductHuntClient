@@ -43,9 +43,22 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated:true)
         let selectedCategory = categories[indexPath.row]
         mainController.choosenCategory = selectedCategory
         mainController.closeCategoriesVC()
+    }
+    
+    
+    //Animation for cell
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        let transform = CATransform3DTranslate(CATransform3DIdentity, 0, 20, 0)
+        cell.layer.transform = transform
+        UIView.animate(withDuration: 0.5) {
+            cell.alpha = 1
+            cell.layer.transform = CATransform3DIdentity
+        }
     }
 }
 
