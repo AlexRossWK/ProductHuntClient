@@ -65,7 +65,7 @@ extension DetailViewController {
     func generateDetailVC() {
         //fctivity View
         view.layer.insertSublayer(gradientLayer, at: 0)
-        let ai = UIActivityIndicatorView(frame: CGRect(x: 0, y: 64, width: 310, height: 285))
+        let ai = UIActivityIndicatorView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: 285))
         view.addSubview(ai)
         ai.startAnimating()
         //add Gradient
