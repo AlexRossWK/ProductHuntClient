@@ -8,4 +8,6 @@ target 'ProductHuntClient' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod ‘Kingfisher’
+  pod 'SDWebImage'
+
 end

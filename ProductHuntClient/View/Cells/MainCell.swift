@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SDWebImage
 
 class MainCell: UITableViewCell {
 
@@ -23,7 +24,10 @@ class MainCell: UITableViewCell {
     }
 
     func configureCell(product : ProductModel) {
-        imageOfProduct.kf.setImage(with: URL(string: product.thumbnail))
+        //GIF
+        //imageOfProduct.kf.setImage(with: URL(string: product.thumbnail))
+        //IMAGE
+        imageOfProduct.sd_setImage(with: URL(string: product.thumbnail), placeholderImage: nil)
         nameLabel.text = product.name
         descriptionLabel.text = product.description
         upvotesLabel.text = "✔︎\(product.upvotesAmount)"
