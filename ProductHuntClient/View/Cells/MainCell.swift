@@ -25,9 +25,11 @@ class MainCell: UITableViewCell {
 
     func configureCell(product : ProductModel) {
         //GIF
-        //imageOfProduct.kf.setImage(with: URL(string: product.thumbnail))
+        let image = UIImage(named: "default_profile_icon")
+        imageOfProduct.kf.indicatorType = .activity
+        imageOfProduct.kf.setImage(with: URL(string: product.thumbnail))
         //IMAGE
-        imageOfProduct.sd_setImage(with: URL(string: product.thumbnail), placeholderImage: nil)
+        //imageOfProduct.sd_setImage(with: URL(string: product.thumbnail), placeholderImage: nil)
         nameLabel.text = product.name
         descriptionLabel.text = product.description
         upvotesLabel.text = "✔︎\(product.upvotesAmount)"

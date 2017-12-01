@@ -165,79 +165,9 @@
                     <view key="view" contentMode="scaleToFill" id="KOb-ui-2qo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npF-27-kBv">
-                                <rect key="frame" x="20" y="352" width="335" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhJ-HE-NOI">
-                                <rect key="frame" x="20" y="383" width="335" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="xX1-Dd-pwh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY2-z1-ViF">
-                                <rect key="frame" x="137.5" y="483" width="100" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="M3c-Bm-D8R"/>
-                                    <constraint firstAttribute="width" constant="100" id="xh5-vN-NrS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <state key="normal" title="Get it">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="getItPressed:" destination="Unb-ic-Ea3" eventType="touchUpInside" id="NSV-Tc-2nD"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vAW-i8-ksi">
-                                <rect key="frame" x="0.0" y="64" width="375" height="280"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="Dfw-Db-d0N"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxU-sa-HoJ">
-                                <rect key="frame" x="0.0" y="319" width="50" height="25"/>
-                                <color key="backgroundColor" red="0.3928414583" green="0.6318336725" blue="0.24287366869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="cyu-vD-CeS"/>
-                                    <constraint firstAttribute="width" constant="50" id="pDh-Au-dXP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="sFj-cL-Mxs" firstAttribute="trailing" secondItem="lhJ-HE-NOI" secondAttribute="trailing" constant="20" id="2hn-g3-GPX"/>
-                            <constraint firstItem="sFj-cL-Mxs" firstAttribute="trailing" secondItem="npF-27-kBv" secondAttribute="trailing" constant="20" id="8rH-Vp-Nmq"/>
-                            <constraint firstItem="vAW-i8-ksi" firstAttribute="leading" secondItem="sFj-cL-Mxs" secondAttribute="leading" id="9M3-wx-Paz"/>
-                            <constraint firstItem="sY2-z1-ViF" firstAttribute="top" secondItem="lhJ-HE-NOI" secondAttribute="bottom" constant="20" id="EPF-6X-2Bt"/>
-                            <constraint firstItem="npF-27-kBv" firstAttribute="top" secondItem="vAW-i8-ksi" secondAttribute="bottom" constant="8" id="H9a-H1-sSc"/>
-                            <constraint firstItem="vAW-i8-ksi" firstAttribute="top" secondItem="x8f-48-jpH" secondAttribute="bottom" id="ICo-Go-DfL"/>
-                            <constraint firstItem="lhJ-HE-NOI" firstAttribute="leading" secondItem="sFj-cL-Mxs" secondAttribute="leading" constant="20" id="J0T-sa-UAJ"/>
-                            <constraint firstItem="sY2-z1-ViF" firstAttribute="centerX" secondItem="KOb-ui-2qo" secondAttribute="centerX" id="Kuv-wp-waK"/>
-                            <constraint firstItem="npF-27-kBv" firstAttribute="top" secondItem="TxU-sa-HoJ" secondAttribute="bottom" constant="8" id="V9r-6C-If2"/>
-                            <constraint firstItem="lhJ-HE-NOI" firstAttribute="top" secondItem="npF-27-kBv" secondAttribute="bottom" constant="10" id="f7r-Gu-eu3"/>
-                            <constraint firstItem="vAW-i8-ksi" firstAttribute="trailing" secondItem="sFj-cL-Mxs" secondAttribute="trailing" id="rsr-XM-Yoo"/>
-                            <constraint firstItem="npF-27-kBv" firstAttribute="leading" secondItem="sFj-cL-Mxs" secondAttribute="leading" constant="20" id="yQd-yD-cvG"/>
-                            <constraint firstItem="TxU-sa-HoJ" firstAttribute="leading" secondItem="sFj-cL-Mxs" secondAttribute="leading" id="zFl-JB-mBs"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sFj-cL-Mxs"/>
                     </view>
-                    <connections>
-                        <outlet property="descrtiptionLabel" destination="lhJ-HE-NOI" id="QRp-fe-Eow"/>
-                        <outlet property="gitItButton" destination="sY2-z1-ViF" id="j8R-Bj-ZxT"/>
-                        <outlet property="imageView" destination="vAW-i8-ksi" id="fwn-KN-KLC"/>
-                        <outlet property="nameLabel" destination="npF-27-kBv" id="IdX-5L-07v"/>
-                        <outlet property="upvotesLabel" destination="TxU-sa-HoJ" id="DYm-RS-oCS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu0-13-ZQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
